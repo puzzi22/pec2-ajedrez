@@ -100,17 +100,29 @@
   margin: 2rem 0;
 }
 
+.rules__title,
+.draw__title,
+.schedule__title {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 /* ------------------------------------ *\
    MAIN NAV
 \* ------------------------------------ */
 
 .club-header__container--margin {
-  margin-right: 2rem; // Adjust the value as needed
-  margin-left: 2rem; // Adjust the value as needed
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .club-header__container {
   justify-content: space-between;
+}
+
+.club-header__item {
+  margin-right: 1.5rem;
 }
 
 /* ------------------------------------ *\

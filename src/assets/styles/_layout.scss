@@ -123,8 +123,43 @@
 }
 
 /* ------------------------------------ *\
-   ANNUAL TOURNAMENT SECTION LAYOUT
+  TOURNAMENT SECTION LAYOUT
 \* ------------------------------------ */
+
+.rules__description {
+  display: grid;
+  grid-template: repeat(3, auto) / 2fr 3fr;
+  grid-template-areas: "quote text1" "list list" "text3 text3";
+  grid-gap: 3rem 2rem;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.rules__quote {
+  grid-area: quote;
+  align-self: center;
+  line-height: 30px;
+}
+
+.rules__text1 {
+  grid-area: text1;
+}
+
+.rules__list {
+  grid-area: list;
+}
+
+.rules__text2 {
+  grid-area: text2;
+}
+
+.rules__text3 {
+  grid-area: text3;
+}
+
+.rules__p3 {
+  margin-top: 1.5rem;
+}
 
 /* ------------------------------------ *\
    PHOTO GALLERY SECTION LAYOUT

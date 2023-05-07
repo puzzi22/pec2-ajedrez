@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+
+    <title>The Poblenou Chess Club | Tournament</title>
+    <meta
+      name="description"
+      content="This website is about the Chess Club of Poblenou (Barcelona)."
+    />
+  </head>
+  <body>
+    <include class="club-header" src="./views/header.html"></include>
+    <div class="club-tournament__hero">
+      <h1 class="club-tournament__title">
+        Poblenou Chess Club
+        <br />
+        Tournament 2023
+      </h1>
+    </div>
+    <section class="rules">
+      <h2 class="rules__title">Tournament Rules</h2>
+      <div class="rules__description">
+        <figure class="rules__quote">
+          <blockquote class="rules__blockquote">
+            <p class="rules__blockquote-text">
+              Winning the tournament was a thrilling experience. The competition
+              was fierce, but the camaraderie and sportsmanship made it
+              unforgettable.
+            </p>
+            <figcaption>—Jordi Miró</figcaption>
+          </blockquote>
+        </figure>
+        <p class="rules__text1">
+          This exciting event brings together chess enthusiasts from all skill
+          levels to celebrate the love of the game. Over two thrilling days,
+          competitors will engage in intense matches to determine the ultimate
+          chess champion. Expect a friendly atmosphere, fierce competition, and
+          the chance to make new friends who share your passion for chess. Don't
+          miss this incredible opportunity to showcase your skills and connect
+          with the local chess community.
+        </p>
+        <ol class="rules__list">
+          <li class="rules__list-item">
+            The tournament is open to players of all ages and skill levels
+            residing in the Poblenou neighborhood.
+          </li>
+          <li class="rules__list-item">
+            Participants must register for the tournament by submitting their
+            full name, contact information, and a brief summary of their chess
+            experience through the online registration form. The form will be
+            online soon.
+          </li>
+          <li class="rules__list-item">
+            Registration is on a first-come, first-served basis, with a limited
+            number of spots available. Early registration is highly encouraged
+            to secure a place in the competition.
+          </li>
+          <li class="rules__list-item">
+            A nominal registration fee of €10 is required to confirm your
+            participation. Payment details will be provided upon submission of
+            the registration form.
+          </li>
+          <li class="rules__list-item">
+            Participants must adhere to the tournament schedule and rules, which
+            will be provided to all registered players before the event.
+          </li>
+        </ol>
+        <div class="rules__text3">
+          <h3 class="rules__h3">
+            Master the Board: Triumph &amp; Treasure Awaits!
+          </h3>
+          <p class="rules__p3">
+            The 2023 champion of the Poblenou Chess Club Tournament will not
+            only earn the prestigious title but also receive a prize. The winner
+            will be awarded prize of 200€, a complimentary membership to the
+            Poblenou Chess Club for the next five years, and a beautiful,
+            high-quality chess set. This prize serves as both a reward for their
+            exceptional skill and an incentive to help developing the passion
+            for chess within our vibrant community.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="draw">
+      <h2 class="draw__title">Tournament Draw</h2>
+      <div class="draw__img-wrapper">
+        <img
+          class="draw__img"
+          src="./assets/images/draw.jpg"
+          alt="Tournament Draw"
+        />
+      </div>
+    </section>
+
+    <section class="schedule">
+      <h2 class="schedule__title">Tournament Schedule</h2>
+      <table class="schedule__table">
+        <thead>
+          <tr class="schedule__table-row">
+            <th class="schedule__table-header">Time</th>
+            <th class="schedule__table-header">Friday, 10.09.2023</th>
+            <th class="schedule__table-header">Saturday, 11.09.2023</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">11:30am</td>
+            <td class="schedule__table-cell"></td>
+            <td class="schedule__table-cell">Round 3 (Semi-Finals)</td>
+          </tr>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">2:00pm</td>
+            <td class="schedule__table-cell"></td>
+            <td class="schedule__table-cell">Round 4 (Finals)</td>
+          </tr>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">4:00pm (approx)</td>
+            <td class="schedule__table-cell"></td>
+            <td class="schedule__table-cell">Awards ceremony</td>
+          </tr>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">4:30pm-5:00pm</td>
+            <td class="schedule__table-cell">Check-In</td>
+            <td class="schedule__table-cell"></td>
+          </tr>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">5:00pm</td>
+            <td class="schedule__table-cell">Meeting</td>
+            <td class="schedule__table-cell"></td>
+          </tr>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">5:30pm</td>
+            <td class="schedule__table-cell">Round 1</td>
+            <td class="schedule__table-cell"></td>
+          </tr>
+          <tr class="schedule__table-row">
+            <td class="schedule__table-cell">8:00pm</td>
+            <td class="schedule__table-cell">Round 2 (Quarter-Finals)</td>
+            <td class="schedule__table-cell"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <include class="club-footer" src="./views/footer.html"></include>
+    <script async type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
