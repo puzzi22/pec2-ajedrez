@@ -9,19 +9,21 @@
 @supports (display: grid) {
   @media (min-width: 42em) and (min-height: 27em) {
     .club-poster {
-      max-width: none;
-      padding: 0;
       display: grid;
+      grid-template-rows: 35vh calc(40vh - 56px) 15vh 10vh;
+      /* stylelint-disable */
       grid-template-columns:
         1fr minmax(10em, max-content) minmax(10em, max-content)
         minmax(1em, 1fr) fit-content(28em) calc(2em + 4vw);
-      grid-template-rows: 35vh calc(40vh - 56px) 15vh 10vh;
+      /* stylelint-enable */
+      max-width: none;
+      padding: 0;
     }
 
     .club-poster--title {
-      grid-column: 3 / 6;
-      grid-row: 1 / 2;
       z-index: 2;
+      grid-row: 1 / 2;
+      grid-column: 3 / 6;
       padding-left: 0.25em;
       margin-bottom: initial;
     }
@@ -29,23 +31,23 @@
     .club-poster--subtitle {
       grid-row: 1 / -1;
       grid-column: 6 / 7;
-      writing-mode: vertical-rl;
       margin-top: 1rem;
       margin-bottom: initial;
       color: $color-white;
+      writing-mode: vertical-rl;
     }
 
     .club-poster--line {
-      grid-column: 5 / 6;
       grid-row: 2;
+      grid-column: 5 / 6;
+      width: 20ch;
       height: 6px;
       background-color: $color-secondary;
-      width: 20ch;
     }
 
     .club-poster--description {
-      grid-column: 5 / 6;
       grid-row: 2;
+      grid-column: 5 / 6;
       align-self: end;
       padding-bottom: 4vh;
       margin-bottom: initial;
@@ -53,33 +55,33 @@
 
     .club-poster--link {
       grid-column: 5 / 6;
-      justify-self: end;
       align-self: center;
+      justify-self: end;
       margin-bottom: initial;
 
       &::before {
-        content: "";
         display: block;
-        height: 4px;
-        background-color: $color-secondary-lighter;
         width: 4ch;
+        height: 4px;
         margin-bottom: 1em;
+        content: "";
+        background-color: $color-secondary-lighter;
       }
     }
 
     .club-poster--img {
-      grid-column: 1 / 4;
       grid-row: 1 / 4;
+      grid-column: 1 / 4;
     }
 
     .club-poster--location {
-      grid-column: 3 / 4;
-      grid-row: 3 / 4;
       z-index: 2;
-      background: $color-white;
-      text-align: center;
       display: flex;
+      grid-row: 3 / 4;
+      grid-column: 3 / 4;
       padding: 0 2em;
+      text-align: center;
+      background: $color-white;
 
       p {
         margin: auto;
@@ -87,15 +89,14 @@
     }
 
     .club-poster--btn {
-      grid-column: 2 / 3;
-      grid-row: 4 / 5;
       position: initial;
-      padding: 0;
+      grid-row: 4 / 5;
+      grid-column: 2 / 3;
       align-self: stretch;
       justify-self: stretch;
+      padding: 0;
     }
   }
-
   @media (min-width: 48em) and (min-height: 27em) {
     .club-poster--line {
       opacity: 1;
@@ -115,8 +116,8 @@
 
 .club-members__content {
   display: flex;
-  gap: 4rem;
   flex-wrap: wrap;
+  gap: 4rem;
   justify-content: center;
   margin: 2rem 5rem;
 }
@@ -125,22 +126,13 @@
    ANNUAL TOURNAMENT SECTION LAYOUT
 \* ------------------------------------ */
 
-// .map-container {
-//   z-index: 0;
-//   width: 100vw;
-//   height: 60vh;
-
-//   @media (max-width: $breakpoint-mobile) {
-//     height: 30vh;
-//   }
-// }
-
 /* ------------------------------------ *\
    PHOTO GALLERY SECTION LAYOUT
 \* ------------------------------------ */
 
 .club-gallery__content {
   max-width: 50vw;
+
   @media (max-width: $breakpoint-mobile) {
     max-width: 90vw;
   }

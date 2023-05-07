@@ -44,20 +44,19 @@
 // :root main {
 //   display: block;
 // }
-
 .club-poster--title {
-  font-family: $font-family-sans-serif;
-  color: $color-primary-lighter;
   margin-bottom: 0.25em;
+  font-family: $font-family-sans-serif;
   font-size: calc(3em + 3vw);
   font-weight: bold;
+  color: $color-primary-lighter;
 }
 
 .club-poster--subtitle {
-  font-size: calc(1em + 0.5vw);
-  text-transform: uppercase;
   margin-bottom: 1em;
+  font-size: calc(1em + 0.5vw);
   color: color.adjust($color, $lightness: $amount);
+  text-transform: uppercase;
 }
 
 .club-poster--line {
@@ -71,11 +70,11 @@
 
 .club-poster--link {
   display: block;
-  text-transform: uppercase;
   margin-bottom: 2em;
+  font-weight: bold;
   color: $color-secondary;
   text-decoration: none;
-  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .club-poster--link__hover:hover {
@@ -83,12 +82,12 @@
 }
 
 .club-poster--btn {
-  color: #fff;
-  background-color: $color-primary;
-  border: 0;
   padding: 1em 2em;
   font-size: 100%;
+  color: #fff;
   text-transform: uppercase;
+  background-color: $color-primary;
+  border: 0;
 }
 
 /* ------------------------------------ *\
@@ -106,8 +105,8 @@
 \* ------------------------------------ */
 
 .club-header__container--margin {
-  margin-left: 2rem; // Adjust the value as needed
   margin-right: 2rem; // Adjust the value as needed
+  margin-left: 2rem; // Adjust the value as needed
 }
 
 .club-header__container {
@@ -119,29 +118,29 @@
 \* ------------------------------------ */
 
 .club-footer {
-  margin-top: 50px;
   padding: 35px 0;
+  margin-top: 50px;
+  color: $color-white;
   text-align: center;
   background-color: $color-secondary;
-  color: $color-white;
 }
 
 .club-footer__navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 35px;
 }
 
 .club-footer__navbar-list,
 .club-footer__social-list {
-  list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 0;
   gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style: none;
 }
 
 .club-footer__brand,
@@ -210,19 +209,19 @@
 .member-card {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   width: 250px;
   padding: 1rem;
   border: $color-secondary-lighter solid 1px;
-  gap: 5px;
 }
 
 .member-card__name {
-  font-size: 1.3rem;
-  font-weight: 700;
   align-self: center;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .member-card__description {
-  font-size: 1rem;
   align-self: center;
+  font-size: 1rem;
 }
