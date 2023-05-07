@@ -55,7 +55,7 @@
 .club-poster--subtitle {
   margin-bottom: 1em;
   font-size: calc(1em + 0.5vw);
-  color: color.adjust($color, $lightness: $amount);
+  color: color.adjust($color-secondary, $lightness: $amount);
   text-transform: uppercase;
 }
 
