@@ -1,0 +1,228 @@
+/* ------------------------------------ *\
+   LINKS
+\* ------------------------------------ */
+
+@mixin link-style($color-white) {
+  position: relative;
+  font-weight: $font-weight-bold;
+  color: $color-secondary;
+  text-decoration: none;
+
+  @extend %transitions;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: $color-white;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+%transitions {
+  transition: color 0.3s ease;
+}
+
+// WHAT IS THIS???
+.club-poster {
+  //   max-width: 45em;
+  position: relative;
+  margin: 0 auto;
+  //   padding: 1em;
+}
+
+// WHAT IS THIS???
+// _:-ms-input-placeholder,
+// :root main {
+//   display: block;
+// }
+
+.club-poster--title {
+  font-family: $font-family-sans-serif;
+  color: $color-primary-lighter;
+  margin-bottom: 0.25em;
+  font-size: calc(3em + 3vw);
+  font-weight: bold;
+}
+
+.club-poster--subtitle {
+  font-size: calc(1em + 0.5vw);
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  color: color.adjust($color, $lightness: $amount);
+}
+
+.club-poster--line {
+  opacity: 0;
+}
+
+.club-poster--description {
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+.club-poster--link {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  color: $color-secondary;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.club-poster--link__hover:hover {
+  color: $color-secondary-lighter;
+}
+
+.club-poster--btn {
+  color: #fff;
+  background-color: $color-primary;
+  border: 0;
+  padding: 1em 2em;
+  font-size: 100%;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------ *\
+   HEADERS
+\* ------------------------------------ */
+
+.club-members__title,
+.club-gallery__title {
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* ------------------------------------ *\
+   MAIN NAV
+\* ------------------------------------ */
+
+.club-header__container--margin {
+  margin-left: 2rem; // Adjust the value as needed
+  margin-right: 2rem; // Adjust the value as needed
+}
+
+.club-header__container {
+  justify-content: space-between;
+}
+
+/* ------------------------------------ *\
+   FOOTER
+\* ------------------------------------ */
+
+.club-footer {
+  margin-top: 50px;
+  padding: 35px 0;
+  text-align: center;
+  background-color: $color-secondary;
+  color: $color-white;
+}
+
+.club-footer__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+}
+
+.club-footer__navbar-list,
+.club-footer__social-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+  gap: 20px;
+}
+
+.club-footer__brand,
+.club-footer__navbar-list,
+.club-footer__social-list {
+  flex-grow: 1;
+  margin: auto 2rem;
+}
+
+.club-footer__social-list {
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.club-footer__brand,
+.club-footer__navbar-link,
+.club-footer__social-link {
+  color: $color-white;
+  text-decoration: none;
+}
+
+.club-footer__navbar-item,
+.club-footer__social-item {
+  margin: 1rem;
+}
+
+.author__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 16px;
+  }
+}
+
+.author__text--lang {
+  font-style: italic;
+}
+
+.copyrights__text {
+  margin-inline: 10%;
+  margin-bottom: 0;
+  font-size: 14px;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+.copyrights__links {
+  color: $color-white;
+}
+
+.club-footer__brand:hover,
+.club-footer__navbar-link:hover,
+.club-footer__social-link:hover,
+.copyrights__links--hover:hover {
+  color: $color-primary-lighter;
+}
+
+/* ------------------------------------ *\
+   MEMBER CARD INFO
+\* ------------------------------------ */
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 1rem;
+  border: $color-secondary-lighter solid 1px;
+  gap: 5px;
+}
+
+.member-card__name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  align-self: center;
+}
+
+.member-card__description {
+  font-size: 1rem;
+  align-self: center;
+}

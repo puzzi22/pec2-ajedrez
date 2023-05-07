@@ -1,0 +1,61 @@
+/* ------------------------------------ *\
+   FRONTPAGE SECTION
+\* ------------------------------------ */
+
+.club-poster--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.club-poster--location {
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.club-poster--location__address {
+  font-weight: normal;
+}
+
+.club-poster--btn {
+  font-weight: bold;
+}
+
+/* ------------------------------------ *\
+   MEMBERS SECTION
+\* ------------------------------------ */
+
+.member-card__contact {
+  @include link-style($color-secondary-lighter);
+  font-size: 1rem;
+  align-self: center;
+}
+
+.member-card__contact:hover {
+  color: $color-secondary-lighter;
+}
+
+/* ------------------------------------ *\
+   ANNUAL TOURNAMENT SECTION
+\* ------------------------------------ */
+
+// .photo-section__img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+/* ------------------------------------ *\
+   PHOTO GALLERY SECTION
+\* ------------------------------------ */
+
+// .music-section__video--for-media-query {
+//   width: 100%;
+//   max-width: 560px;
+//   height: 315px;
+
+//   @media (max-width: $breakpoint-mobile) {
+//     height: calc((9 / 16) * 100vw);
+//   }
+// }

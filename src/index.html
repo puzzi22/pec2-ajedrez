@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+
+    <title>The Poblenou Chess Club</title>
+    <meta
+      name="description"
+      content="This website is about the Chess Club of Poblenou (Barcelona)."
+    />
+  </head>
+  <body>
+    <div class="club-homepage">
+      <include class="club-header" src="./views/header.html"></include>
+      <div class="club-poster">
+        <h1 class="club-poster--title">Chess Open 2023</h1>
+        <h2 class="club-poster--subtitle">The Poblenou Chess Club</h2>
+        <hr class="club-poster--line" />
+        <p class="club-poster--description">
+          The Poblenou Chess Club welcomes enthusiasts of all skill levels and
+          experience to indulge in the game of kings. Our members enjoy the
+          freedom to choose their opponents, although on occasion, matches are
+          organized based on players' skills. We take pride in providing all the
+          essentials - boards, clocks, and pieces - for a seamless gaming
+          experience. Each year in September, we host an exciting neighborhood
+          tournament that culminates in the crowning of the local champion. Join
+          us at the Poblenou Chess Club for engaging matches, friendly
+          competition, and the chance to connect with fellow chess aficionados.
+        </p>
+        <a class="club-poster--link club-poster--link__hover" href="#">
+          Read more
+        </a>
+        <img
+          class="club-poster--img"
+          src="/src/assets/images/pexels-charlie-solorzano-1762815.jpg"
+          alt="Chess Table"
+        />
+        <div class="club-poster--location">
+          <p>
+            10.09.2023
+            <br />
+            <span class="club-poster--location__address">
+              Carrer de Pujades 178, Barcelona
+            </span>
+            <br />
+            Centre Moral i Cultural del Poblenou
+          </p>
+        </div>
+        <a class="club-poster--btn" href="./members.html">Join us!</a>
+      </div>
+    </div>
+    <include class="club-footer" src="./views/footer.html"></include>
+    <script async type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
