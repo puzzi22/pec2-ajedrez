@@ -231,23 +231,3 @@
 /* ------------------------------------ *\
    MEMBER CARD INFO
 \* ------------------------------------ */
-
-.member-card {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 250px;
-  padding: 1rem;
-  border: $color-secondary-lighter solid 1px;
-}
-
-.member-card__name {
-  align-self: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.member-card__description {
-  align-self: center;
-  font-size: 1rem;
-}
