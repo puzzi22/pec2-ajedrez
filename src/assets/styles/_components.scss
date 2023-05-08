@@ -42,6 +42,10 @@
   font-size: calc(3em + 3vw);
   font-weight: bold;
   color: $color-primary-lighter;
+
+  @media (max-width: $breakpoint-mobile) {
+    color: #956a3d;
+  }
 }
 
 .club-poster__subtitle {
@@ -66,7 +70,7 @@
   font-weight: bold;
   color: $color-secondary;
   text-decoration: none;
-  text-transform: uppercase;
+  border-bottom: $color-secondary solid 1px;
 }
 
 .club-poster__link--hover:hover {
