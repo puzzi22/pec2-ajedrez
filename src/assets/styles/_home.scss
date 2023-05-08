@@ -2,23 +2,40 @@
    FRONTPAGE SECTION
 \* ------------------------------------ */
 
-.club-poster--img {
+.club-poster__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.club-poster--location {
+.club-poster__img--darkened-layer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.club-poster__location {
   font-weight: bold;
   line-height: 1.5;
   text-transform: uppercase;
 }
 
-.club-poster--location__address {
+.club-poster__location-address {
   font-weight: normal;
 }
 
-.club-poster--btn {
+.club-poster__btn {
   font-weight: bold;
 }
 
@@ -27,6 +44,10 @@
 \* ------------------------------------ */
 
 .member-card__contact {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end; /* Align the text at the bottom of the available space */
+
   @include link-style($color-secondary-lighter);
   align-self: center;
   font-size: 1rem;
@@ -72,6 +93,10 @@
   color: #daa520;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 50px;
+  }
 }
 
 .draw__img-wrapper {
@@ -89,6 +114,10 @@
     height: 100%;
     content: "";
     background-color: rgba(218, 165, 32, 0.189);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 90vw;
   }
 }
 
@@ -112,6 +141,11 @@
   border: 1px solid black;
 }
 
+.schedule__table-cell {
+  position: relative;
+  font-weight: bold;
+}
+
 .schedule__table-row:nth-child(odd) td:nth-child(odd),
 .schedule__table-row:nth-child(even) td:nth-child(even) {
   background-color: #f0e6d6d8;
@@ -123,8 +157,32 @@
 }
 
 .schedule__table-header {
-  color: #000;
-  background-color: #9c9c9c9d;
+  color: $color-white;
+  background-color: #000000c7;
+}
+
+.schedule__table-header:nth-child(1),
+.schedule__table-header:nth-child(2),
+.schedule__table-header:nth-child(6),
+.schedule__table-header:nth-child(7),
+.empty {
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.schedule__table-cell--piece::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .rules__text1,
@@ -135,6 +193,11 @@
 
 .rules__list {
   margin: auto 3rem;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 }
 
 .rules__list-item {
@@ -157,6 +220,10 @@
 
 .rules__blockquote-text::after {
   content: "\201D";
+}
+
+.schedule {
+  margin-bottom: 6rem;
 }
 
 /* ------------------------------------ *\

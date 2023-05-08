@@ -2,13 +2,27 @@
    FRONTPAGE SECTION LAYOUT
 \* ------------------------------------ */
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content-container {
+  flex: 1;
+}
+
 .club-homepage {
-  max-height: 100vw;
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
 
 @supports (display: grid) {
-  @media (min-width: 42em) and (min-height: 27em) {
+  @media (min-width: 769px) and (min-height: 27em) {
     .club-poster {
+      position: relative;
       display: grid;
       grid-template-rows: 35vh calc(40vh - 56px) 15vh 10vh;
       /* stylelint-disable */
@@ -20,40 +34,45 @@
       padding: 0;
     }
 
-    .club-poster--title {
+    .club-poster__title {
       z-index: 2;
       grid-row: 1 / 2;
       grid-column: 3 / 6;
       padding-left: 0.25em;
       margin-bottom: initial;
+
+      @media (max-width: 1065px) {
+        grid-column: 1 / 4;
+        margin-right: 1rem;
+        text-align: right;
+      }
     }
 
-    .club-poster--subtitle {
+    .club-poster__subtitle {
       grid-row: 1 / -1;
       grid-column: 6 / 7;
       margin-top: 1rem;
       margin-bottom: initial;
       color: $color-white;
+      text-align: center;
       writing-mode: vertical-rl;
     }
 
-    .club-poster--line {
-      grid-row: 2;
-      grid-column: 5 / 6;
-      width: 20ch;
-      height: 6px;
-      background-color: $color-secondary;
-    }
-
-    .club-poster--description {
+    .club-poster__description {
       grid-row: 2;
       grid-column: 5 / 6;
       align-self: end;
       padding-bottom: 4vh;
       margin-bottom: initial;
+
+      @media (max-width: 1065px) {
+        grid-row: 1 / 4;
+        align-self: center;
+      }
     }
 
-    .club-poster--link {
+    .club-poster__link {
+      grid-row: 3 / 5;
       grid-column: 5 / 6;
       align-self: center;
       justify-self: end;
@@ -65,16 +84,16 @@
         height: 4px;
         margin-bottom: 1em;
         content: "";
-        background-color: $color-secondary-lighter;
+        background-color: $color-primary-lighter;
       }
     }
 
-    .club-poster--img {
+    .club-poster__img {
       grid-row: 1 / 4;
       grid-column: 1 / 4;
     }
 
-    .club-poster--location {
+    .club-poster__location {
       z-index: 2;
       display: flex;
       grid-row: 3 / 4;
@@ -88,18 +107,13 @@
       }
     }
 
-    .club-poster--btn {
+    .club-poster__btn {
       position: initial;
       grid-row: 4 / 5;
       grid-column: 2 / 3;
       align-self: stretch;
       justify-self: stretch;
       padding: 0;
-    }
-  }
-  @media (min-width: 48em) and (min-height: 27em) {
-    .club-poster--line {
-      opacity: 1;
     }
   }
 }
@@ -133,6 +147,11 @@
   grid-gap: 3rem 2rem;
   width: 70vw;
   margin: 0 auto;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .rules__quote {

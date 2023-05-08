@@ -17,49 +17,55 @@
     />
   </head>
   <body>
-    <div class="club-homepage">
-      <include class="club-header" src="./views/header.html"></include>
-      <div class="club-poster">
-        <h1 class="club-poster--title">Chess Open 2023</h1>
-        <h2 class="club-poster--subtitle">The Poblenou Chess Club</h2>
-        <hr class="club-poster--line" />
-        <p class="club-poster--description">
-          The Poblenou Chess Club welcomes enthusiasts of all skill levels and
-          experience to indulge in the game of kings. Our members enjoy the
-          freedom to choose their opponents, although on occasion, matches are
-          organized based on players' skills. We take pride in providing all the
-          essentials - boards, clocks, and pieces - for a seamless gaming
-          experience. Each year in September, we host an exciting neighborhood
-          tournament that culminates in the crowning of the local champion. Join
-          us at the Poblenou Chess Club for engaging matches, friendly
-          competition, and the chance to connect with fellow chess aficionados.
-        </p>
-        <a
-          class="club-poster--link club-poster--link__hover"
-          href="./tournament.html"
-        >
-          Read more
-        </a>
-        <img
-          class="club-poster--img"
-          src="/src/assets/images/pexels-charlie-solorzano-1762815.jpg"
-          alt="Chess Table"
-        />
-        <div class="club-poster--location">
-          <p>
-            10 &amp; 11.09.2023
-            <br />
-            <span class="club-poster--location__address">
-              Carrer de Pujades 178, Barcelona
-            </span>
-            <br />
-            Centre Moral i Cultural del Poblenou
-          </p>
+    <div class="page-container">
+      <div class="content-container">
+        <div class="club-homepage">
+          <include class="club-header" src="./views/header.html"></include>
+          <div class="club-poster">
+            <h1 class="club-poster__title">Chess Tournament 2023</h1>
+            <h2 class="club-poster__subtitle">The Poblenou Chess Club</h2>
+            <p class="club-poster__description">
+              Welcoming enthusiasts of all skill levels, the Poblenou Chess Club
+              offers a space to indulge in the game of kings. Members enjoy the
+              freedom to choose opponents, with occasional skill-based matches.
+              Providing boards, clocks, and pieces, we ensure a seamless gaming
+              experience. Each September, our neighborhood tournament crowns a
+              local champion. Join us for engaging matches, friendly
+              competition, and connection with fellow chess aficionados.
+            </p>
+            <a
+              class="club-poster__link club-poster__link--hover"
+              href="./tournament.html"
+            >
+              Read more
+            </a>
+            <img
+              class="club-poster__img"
+              src="/src/assets/images/poster.jpg"
+              alt="Chess Table"
+            />
+            <div class="club-poster__location">
+              <p>
+                10 &amp; 11.09.2023
+                <br />
+                <span class="club-poster__location-address">
+                  Carrer de Pujades 178, Barcelona
+                </span>
+                <br />
+                Centre Moral i Cultural del Poblenou
+              </p>
+            </div>
+            <button
+              class="club-poster__btn btn btn-primary custom-btn"
+              onclick="location.href='./members.html'"
+            >
+              Join us!
+            </button>
+          </div>
         </div>
-        <a class="club-poster--btn" href="./members.html">Join us!</a>
       </div>
+      <include class="club-footer" src="./views/footer.html"></include>
     </div>
-    <include class="club-footer" src="./views/footer.html"></include>
     <script async type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

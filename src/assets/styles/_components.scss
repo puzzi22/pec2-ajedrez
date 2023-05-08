@@ -31,20 +31,12 @@
   transition: color 0.3s ease;
 }
 
-// WHAT IS THIS???
 .club-poster {
-  //   max-width: 45em;
   position: relative;
   margin: 0 auto;
-  //   padding: 1em;
 }
 
-// WHAT IS THIS???
-// _:-ms-input-placeholder,
-// :root main {
-//   display: block;
-// }
-.club-poster--title {
+.club-poster__title {
   margin-bottom: 0.25em;
   font-family: $font-family-sans-serif;
   font-size: calc(3em + 3vw);
@@ -52,7 +44,7 @@
   color: $color-primary-lighter;
 }
 
-.club-poster--subtitle {
+.club-poster__subtitle {
   margin-bottom: 1em;
   font-size: calc(1em + 0.5vw);
   color: $color-secondary-lighter;
@@ -63,12 +55,12 @@
   opacity: 0;
 }
 
-.club-poster--description {
+.club-poster__description {
   margin-bottom: 1em;
   line-height: 1.3;
 }
 
-.club-poster--link {
+.club-poster__link {
   display: block;
   margin-bottom: 2em;
   font-weight: bold;
@@ -77,17 +69,22 @@
   text-transform: uppercase;
 }
 
-.club-poster--link__hover:hover {
-  color: $color-secondary-lighter;
+.club-poster__link--hover:hover {
+  color: $color-primary-lighter;
 }
 
-.club-poster--btn {
+/* ------------------------------------ *\
+   BUTTONS
+\* ------------------------------------ */
+
+.custom-btn {
   padding: 1em 2em;
   font-size: 100%;
+  font-weight: bold;
   color: #fff;
   text-transform: uppercase;
-  background-color: $color-primary;
   border: 0;
+  border-radius: 0;
 }
 
 /* ------------------------------------ *\
@@ -102,7 +99,8 @@
 
 .rules__title,
 .draw__title,
-.schedule__title {
+.schedule__title,
+.club-gallery__title {
   margin-top: 4rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -130,7 +128,7 @@
 \* ------------------------------------ */
 
 .club-footer {
-  padding: 35px 0;
+  padding: 35px 20px;
   margin-top: 50px;
   color: $color-white;
   text-align: center;
@@ -143,40 +141,45 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 35px;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
 }
 
-.club-footer__navbar-list,
-.club-footer__social-list {
+.club-footer__navbar-list {
   display: flex;
-  gap: 20px;
   align-items: center;
   justify-content: space-around;
   padding-left: 0;
   list-style: none;
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 20px;
+  }
 }
 
 .club-footer__brand,
 .club-footer__navbar-list,
 .club-footer__social-list {
-  flex-grow: 1;
-  margin: auto 2rem;
+  flex: 1 0 33.33%;
+  margin: auto 0;
 }
 
 .club-footer__social-list {
-  justify-content: space-around;
+  justify-content: center;
   font-size: 30px;
 }
 
 .club-footer__brand,
-.club-footer__navbar-link,
-.club-footer__social-link {
+.club-footer__navbar-link {
   color: $color-white;
   text-decoration: none;
 }
 
 .club-footer__navbar-item,
 .club-footer__social-item {
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .author__text {
@@ -209,8 +212,8 @@
 
 .club-footer__brand:hover,
 .club-footer__navbar-link:hover,
-.club-footer__social-link:hover,
-.copyrights__links--hover:hover {
+.copyrights__links--hover:hover,
+.club-footer__icon:hover {
   color: $color-primary-lighter;
 }
 

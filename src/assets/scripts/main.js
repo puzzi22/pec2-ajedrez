@@ -3,8 +3,9 @@
  */
 // import * as bootstrap from 'bootstrap'
 
+import "bootstrap";
+// import "../styles/main.scss";
+
 /**
  * Write any other JavaScript below
  */
-import "bootstrap";
-import "../styles/main.scss";

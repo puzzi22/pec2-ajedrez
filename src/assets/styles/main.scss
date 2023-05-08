@@ -2,9 +2,8 @@
  * Use this file to import partials.
  * Do not include SCSS code in this file.
  */
-
+@import "custom"; // Import Bootstrap customization
 @import "bootstrap/scss/bootstrap";
-@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 /**
  * Import variables
@@ -12,14 +11,16 @@
 @import "variables";
 
 /**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- */
+* Import npm dependencies
+* see: https://v2.parceljs.org/features/module-resolution/
+*/
+
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 /**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+* Import layouts
+* It's a best practice to use a different partial for each page
+*/
 
 @import "base"; // All resets and basic styling
 @import "layout"; // All that handles the layout, such as the container and any grid systems.

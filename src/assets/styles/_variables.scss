@@ -1,5 +1,7 @@
 @use "sass:color";
 
+$primary: #75342d; // set the $primary variable
+
 // Typography
 $font-family-sans-serif: "Lato", sans-serif, "Helvetica Neue", arial, sans-serif;
 $font-family-serif: "Georgia", "Times New Roman", serif;
@@ -19,3 +21,10 @@ $color-secondary-lighter: color.adjust($color-secondary, $lightness: 20%);
 
 // Breakpoints
 $breakpoint-mobile: 768px;
+
+// Custom nav-link-height
+$nav-link-height: calculate-nav-link-height(
+  $font-size-base,
+  $line-height-base,
+  $nav-link-padding-y
+);
