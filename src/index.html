@@ -39,11 +39,27 @@
             >
               Read more about the tournament
             </a>
-            <img
-              class="club-poster__img"
-              src="/src/assets/images/poster.jpg"
-              alt="Chess Table"
-            />
+            <picture class="club-poster__img">
+              <source
+                srcset="
+                  ./assets/images/poster.jpg?as=webp&width=400 400w,
+                  ./assets/images/poster.jpg?as=webp&width=800 800w
+                "
+                sizes="(max-width: 600px) 400px, 800px"
+                type="image/webp"
+              />
+              <img
+                src="./assets/images/poster.jpg"
+                srcset="
+                  ./assets/images/poster.jpg?width=400 400w,
+                  ./assets/images/poster.jpg?width=800 800w
+                "
+                sizes="(max-width: 600px) 400px, 800px"
+                alt="Chess Table"
+                class="club-poster__img"
+                loading="lazy"
+              />
+            </picture>
             <div class="club-poster__location">
               <p>
                 10 &amp; 11.09.2023

@@ -95,11 +95,27 @@
     <section class="draw">
       <h2 class="draw__title">Tournament Draw</h2>
       <div class="draw__img-wrapper">
-        <img
-          class="draw__img"
-          src="./assets/images/draw.jpg"
-          alt="Tournament Draw"
-        />
+        <picture>
+          <source
+            srcset="
+              ./assets/images/draw.jpg?as=webp&width=400 400w,
+              ./assets/images/draw.jpg?as=webp&width=800 800w
+            "
+            sizes="(max-width: 600px) 400px, 800px"
+            type="image/webp"
+          />
+          <img
+            src="./assets/images/draw.jpg"
+            srcset="
+              ./assets/images/draw.jpg?width=400 400w,
+              ./assets/images/draw.jpg?width=800 800w
+            "
+            sizes="(max-width: 600px) 400px, 800px"
+            alt="Tournament Draw"
+            class="draw__img"
+            loading="lazy"
+          />
+        </picture>
       </div>
     </section>
 
