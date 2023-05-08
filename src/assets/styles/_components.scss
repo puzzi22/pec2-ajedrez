@@ -211,7 +211,9 @@
 }
 
 .copyrights__links {
+  font-weight: bold;
   color: $color-white;
+  text-decoration: none;
 }
 
 .club-footer__brand:hover,
@@ -219,6 +221,11 @@
 .copyrights__links--hover:hover,
 .club-footer__icon:hover {
   color: $color-primary-lighter;
+}
+
+.club-footer__navbar-link:hover,
+.copyrights__links--hover:hover {
+  border-bottom: $color-primary-lighter solid 1px;
 }
 
 /* ------------------------------------ *\
